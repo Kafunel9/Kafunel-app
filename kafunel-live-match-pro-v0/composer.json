@@ -1,0 +1,24 @@
+{
+    "name": "kafunel/kafunel-live-match-ultimate",
+    "description": "Plugin WordPress Pro pour la couverture de matchs de football en direct avec intégration mobile React Native",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Kafunel Dev Team",
+            "email": "dev@kafunel.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.7",
+        "wp-coding-standards/wpcs": "^3.0"
+    },
+    "scripts": {
+        "test": "phpcs --standard=WordPress --extensions=php .",
+        "format": "phpcbf --standard=WordPress --extensions=php ."
+    }
+}

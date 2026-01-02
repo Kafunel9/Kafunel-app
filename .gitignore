@@ -1,37 +1,26 @@
 ```
-# WordPress specific
-wp-config.php
-wp-content/uploads/
-*.log
-debug.log
-
 # Dependencies
-node_modules/
 vendor/
-
-# Build artifacts
-build/
-dist/
-*.min.js
-*.min.css
+composer.lock
 
 # Environment
 .env
 .env.local
 .env.*
 
-# Editor files
-.vscode/
-.idea/
+# Logs
+*.log
+
+# Temporary files
+*.tmp
 *.swp
 *.swo
-*~
 
-# System files
+# OS generated files
 .DS_Store
 Thumbs.db
 
-# Cache
-.cache/
-*.cache
+# PHP specific
+*.php~
+**/vendor/**/*
 ```
