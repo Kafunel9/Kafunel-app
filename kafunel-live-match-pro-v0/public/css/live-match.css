@@ -1,0 +1,366 @@
+/* Kafunel Live Match - Frontend Styles */
+
+.kafunel-live-match-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.kafunel-match-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kafunel-league-logo {
+    max-width: 80px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.kafunel-match-league {
+    margin: 0;
+    color: #333;
+    font-size: 1.4em;
+}
+
+.kafunel-match-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.kafunel-live-indicator {
+    text-align: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #b3d9ff;
+    border-radius: 4px;
+}
+
+.live-blinking {
+    animation: blink-animation 1s infinite;
+    color: #ff0000;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+@keyframes blink-animation {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.kafunel-match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.kafunel-team {
+    text-align: center;
+    flex: 1;
+}
+
+.kafunel-team-logo {
+    max-width: 60px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.kafunel-team-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.kafunel-match-score {
+    text-align: center;
+    min-width: 120px;
+}
+
+.kafunel-score-home, .kafunel-score-away {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: bold;
+    min-width: 40px;
+    color: #333;
+}
+
+.kafunel-score-separator {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #666;
+}
+
+.kafunel-match-time {
+    font-size: 1em;
+    color: #666;
+    font-weight: bold;
+}
+
+.kafunel-live-stats {
+    margin: 20px 0;
+}
+
+.kafunel-stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.kafunel-stat {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.kafunel-stat-label {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.kafunel-progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.kafunel-progress {
+    height: 100%;
+    background-color: #0073aa;
+}
+
+.kafunel-stat-value {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.kafunel-match-events, .kafunel-match-lineups {
+    margin: 25px 0;
+}
+
+.kafunel-match-events h3, .kafunel-match-lineups h3 {
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.kafunel-events-container {
+    margin-top: 10px;
+}
+
+.kafunel-event {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kafunel-event-time {
+    font-weight: bold;
+    min-width: 40px;
+    background-color: #e9ecef;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+.kafunel-event-type {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.kafunel-event-type.goal {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.kafunel-event-type.card {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.kafunel-event-type.substitution {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.kafunel-event-player {
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+}
+
+.kafunel-lineups-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.kafunel-lineup-team {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 250px;
+}
+
+.kafunel-lineup-team h4 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.kafunel-formation {
+    font-style: italic;
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.kafunel-players {
+    margin-top: 10px;
+}
+
+.kafunel-player {
+    padding: 6px;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+}
+
+.kafunel-player-number {
+    font-weight: bold;
+    min-width: 30px;
+    color: #0073aa;
+}
+
+.kafunel-player-name {
+    flex: 1;
+}
+
+.kafunel-match-actions {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.kafunel-share-whatsapp, .kafunel-share-facebook {
+    padding: 12px 24px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.kafunel-share-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.kafunel-share-facebook {
+    background-color: #4267B2;
+    color: white;
+}
+
+.kafunel-payment-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.kafunel-payment-section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.kafunel-payment-options {
+    margin-top: 10px;
+}
+
+.kafunel-payment-option {
+    margin: 8px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+}
+
+.kafunel-paypal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0070ba;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.kafunel-paypal-button:hover {
+    background-color: #00598c;
+    text-decoration: none;
+}
+
+.kafunel-error {
+    color: #d63638;
+    padding: 15px;
+    background-color: #f9e7e7;
+    border: 1px solid #f0c5c5;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .kafunel-match-teams {
+        flex-direction: column;
+    }
+    
+    .kafunel-team {
+        margin: 10px 0;
+    }
+    
+    .kafunel-match-score {
+        margin: 15px 0;
+    }
+    
+    .kafunel-lineups-container {
+        flex-direction: column;
+    }
+    
+    .kafunel-lineup-team {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .kafunel-match-actions {
+        flex-direction: column;
+    }
+    
+    .kafunel-share-whatsapp, .kafunel-share-facebook {
+        margin: 5px 0;
+        width: 100%;
+    }
+}
