@@ -21,6 +21,12 @@ define('KAFUNEL_ULTIMATE_VERSION', '1.0.0');
 define('KAFUNEL_ULTIMATE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('KAFUNEL_ULTIMATE_PLUGIN_URL', plugin_dir_url(__FILE__));
 
+// Include utility classes
+require_once KAFUNEL_ULTIMATE_PLUGIN_DIR . 'utils/class-logger.php';
+require_once KAFUNEL_ULTIMATE_PLUGIN_DIR . 'utils/class-exceptions.php';
+require_once KAFUNEL_ULTIMATE_PLUGIN_DIR . 'utils/class-validator.php';
+require_once KAFUNEL_ULTIMATE_PLUGIN_DIR . 'utils/class-cache-manager.php';
+
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
@@ -45,6 +51,24 @@ class Kafunel_Ultimate {
      * @var      string    $plugin_name    The string used to uniquely identify this plugin.
      */
     protected $plugin_name;
+    
+    /**
+     * Logger instance
+     *
+     * @since    1.1.0
+     * @access   private
+     * @var      Kafunel_Logger    $logger    Logger for the plugin.
+     */
+    private $logger;
+    
+    /**
+     * Cache manager instance
+     *
+     * @since    1.1.0
+     * @access   private
+     * @var      Kafunel_Cache_Manager    $cache_manager    Cache manager for the plugin.
+     */
+    private $cache_manager;
 
     /**
      * Define the core functionality of the plugin.
@@ -57,6 +81,10 @@ class Kafunel_Ultimate {
      */
     public function __construct() {
         $this->plugin_name = 'kafunel-ultimate';
+        
+        // Initialize utilities
+        $this->logger = new Kafunel_Logger();
+        $this->cache_manager = new Kafunel_Cache_Manager($this->logger);
 
         $this->load_dependencies();
         $this->set_locale();
@@ -176,6 +204,26 @@ class Kafunel_Ultimate {
      */
     public function get_version() {
         return KAFUNEL_ULTIMATE_VERSION;
+    }
+    
+    /**
+     * Get the logger instance
+     *
+     * @since     1.1.0
+     * @return    Kafunel_Logger    The logger instance.
+     */
+    public function get_logger() {
+        return $this->logger;
+    }
+    
+    /**
+     * Get the cache manager instance
+     *
+     * @since     1.1.0
+     * @return    Kafunel_Cache_Manager    The cache manager instance.
+     */
+    public function get_cache_manager() {
+        return $this->cache_manager;
     }
 }
 
@@ -402,7 +450,9 @@ class Kafunel_Ultimate_Public {
 
 // Initialize the plugin
 function run_kafunel_ultimate() {
+    global $kafunel_ultimate_instance;
     $plugin = new Kafunel_Ultimate();
+    $kafunel_ultimate_instance = $plugin;
     $plugin->run();
 }
 
