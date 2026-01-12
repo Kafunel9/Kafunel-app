@@ -1,0 +1,99 @@
+/* Kafunel Optimizer AI - Admin Styles */
+
+.kafunel-usage-warning {
+    color: #ca4a1f;
+    font-weight: bold;
+}
+
+.kafunel-success-indicator {
+    color: #00a32a;
+    margin-left: 5px;
+}
+
+.kafunel-optimize-btn {
+    margin-top: 5px;
+}
+
+/* Optimization status indicators */
+.kafunel-optimized {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+.kafunel-not-optimized {
+    color: #666;
+    font-style: italic;
+}
+
+.kafunel-limit-reached {
+    color: #ca4a1f;
+    font-weight: bold;
+}
+
+/* Progress bar styles */
+.kafunel-progress-container {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.kafunel-progress-bar {
+    height: 20px;
+    background-color: #0073aa;
+    transition: width 0.3s ease;
+}
+
+.kafunel-progress-text {
+    text-align: center;
+    position: relative;
+    top: -18px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Modal enhancements */
+.attachment-details .kafunel-optimization-info {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+/* Bulk action button styling */
+.bulk-action-notice {
+    background: #fff8e5;
+    border-left: 4px solid #ffb900;
+    padding: 10px 12px;
+    margin: 5px 0 15px;
+}
+
+/* Stats card styling */
+.kafunel-stats-card {
+    border: 1px solid #ccd0d4;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.kafunel-stats-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #23282d;
+}
+
+.kafunel-stats-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0073aa;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+    .kafunel-usage-warning {
+        display: block;
+        font-size: 14px;
+    }
+}
