@@ -1,0 +1,97 @@
+/* Kafunel Optimizer AI - Media Library Styles */
+
+/* Optimization status in media grid */
+.attachments .attachment .kafunel-status-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    z-index: 10;
+}
+
+/* Optimization status in list view */
+.media-modal .media-toolbar .kafunel-bulk-actions {
+    margin-right: 10px;
+}
+
+.wp-list-table .kafunel-status-column {
+    width: 120px;
+}
+
+/* Optimized image indicators */
+.wp-list-table .kafunel-optimized {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+.wp-list-table .kafunel-not-optimized {
+    color: #666;
+    font-style: italic;
+}
+
+.wp-list-table .kafunel-limit-reached {
+    color: #ca4a1f;
+    font-weight: bold;
+}
+
+/* Loading states */
+.kafunel-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.kafunel-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success/Failure indicators */
+.kafunel-success {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+.kafunel-error {
+    color: #ca4a1f;
+    font-weight: bold;
+}
+
+/* Optimized file size display */
+.kafunel-filesize-original {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.kafunel-filesize-optimized {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .wp-list-table .kafunel-status-column {
+        width: 80px;
+    }
+    
+    .kafunel-status-badge {
+        font-size: 10px;
+        padding: 1px 4px;
+    }
+}

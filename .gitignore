@@ -1,37 +1,7 @@
 ```
-# WordPress specific
-wp-config.php
-wp-content/uploads/
-*.log
-debug.log
+# Compressed files
+*.zip
 
-# Dependencies
-node_modules/
-vendor/
-
-# Build artifacts
-build/
-dist/
-*.min.js
-*.min.css
-
-# Environment
-.env
-.env.local
-.env.*
-
-# Editor files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Cache
-.cache/
-*.cache
+# Documentation
+publish-to-github.md
 ```
