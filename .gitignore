@@ -1,38 +1,7 @@
 ```
-# Dependencies
-node_modules/
+# Compressed files
+*.zip
 
-# Build artifacts
-dist/
-build/
-*.min.js
-*.min.css
-*.map
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.swp
-*~
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE specific
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# WordPress specific
-wp-content/cache/
-*.sql
+# Documentation
+publish-to-github.md
 ```
